@@ -34,3 +34,65 @@
 .cover-title{left:5%;max-width:52%;max-height:48%;overflow:auto}.cover .teacher{width:min(38%,480px);right:2%;bottom:0}
 @media(max-width:780px){.cover-title{top:23%;max-width:53%;max-height:48%;font-size:clamp(19px,5vw,29px);padding:12px}.cover .teacher{width:42%;right:0}.cover .primary{left:5%;bottom:5%;font-size:16px;padding:11px 22px}.dialogue .teacher,.dialogue .learner{max-width:36%}.dialogue .teacher{left:0}.dialogue .learner{right:0}.dialogue .primary{width:23%;min-width:0;padding:8px 4px;font-size:12px;line-height:1.15;white-space:normal}}
 .office-object[aria-pressed='true']{border-color:#508463;box-shadow:0 0 0 3px #a4d0a9,1px 5px 6px #49332450}.office-object[aria-pressed='true'] small:after{content:' ✓';color:#29744a;font-weight:bold}
+
+/* Small displays: readable text and controls, including inside an LMS iframe. */
+@media (max-width:780px) {
+  .player {min-height:0; height:100vh; height:100dvh;}
+  .topbar {gap:6px;}
+  .topbtn, .icon, .next-control {min-height:40px;}
+  .icon {min-width:38px;}
+  .controls {gap:4px;}
+  .timeline-label {min-width:20px;}
+  .timeline-label input {min-width:0; width:100%;}
+  .completion {font-size:12px;}
+  .lesson-header {padding:10px 14px;}
+  .lesson-header h1 {font-size:clamp(18px,4.5vw,25px); margin:4px 0;}
+  .lesson-body {padding:8px; gap:7px;}
+  .content-panel {padding:16px; font-size:16px; line-height:1.5; overflow:auto; overscroll-behavior:contain;}
+  .side-note {flex-basis:84px;}
+  .side-note p {right:95px; font-size:13px; line-height:1.25;}
+  .zup-page {font-size:15px;}
+  .zup-field select, .zup-field input {font-size:16px; min-height:42px;}
+  .zup-toolbar button, .office-object, .decision-tray {min-height:42px;}
+}
+
+@media (max-width:540px) and (orientation:portrait) {
+  .topbar-spacer {display:none;}
+  .section-name {max-width:46%;}
+  .side-note {display:none;}
+  .cover-title {top:23%; left:5%; max-width:64%; max-height:48%; font-size:clamp(22px,6vw,29px);}
+  .cover .teacher {width:48%; right:-3%;}
+  .cover .primary {bottom:5%;}
+  .dialogue {display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:minmax(0,auto) minmax(0,auto) minmax(60px,1fr); gap:8px; padding:10px 12px 58px;}
+  .dialogue .teacher-dialogue, .dialogue .learner-dialogue {position:relative; left:auto; right:auto; top:auto; width:100%; max-width:none; max-height:min(25vh,175px); overflow:auto; z-index:3; font-size:15px; line-height:1.35; padding:11px 14px; border-radius:16px;}
+  .dialogue .teacher-dialogue {grid-column:1; grid-row:1;}
+  .dialogue .learner-dialogue {grid-column:1; grid-row:2;}
+  .dialogue .teacher, .dialogue .learner {width:47%; max-width:210px; height:auto; bottom:0;}
+  .dialogue .teacher {left:-2%;}
+  .dialogue .learner {right:-2%;}
+  .dialogue .primary {width:auto; min-width:128px; max-width:46%; bottom:8px; padding:9px 12px; font-size:14px;}
+  .intro-counter {bottom:10px; right:10px;}
+  .zup-app {flex-direction:column;}
+  .zup-sidebar {flex:0 0 auto; width:100%; max-height:100px; padding:6px 8px; border-right:0; border-bottom:1px solid #ccc; overflow:auto;}
+  .zup-sidebar > b, .zup-side-title {display:none;}
+  .zup-sidebar > button {width:auto; min-height:40px; font-size:12px;}
+  .zup-cases {display:flex; gap:6px; overflow-x:auto;}
+  .zup-list-item {flex:0 0 150px; min-height:42px; font-size:12px;}
+  .zup-page {padding:12px;}
+  .zup-table {display:block; overflow-x:auto;}
+}
+
+@media (max-width:360px) {
+  .timeline-label {display:none;}
+  .controls {justify-content:space-between;}
+}
+
+@media (max-width:780px) and (max-height:500px) {
+  .topbar {height:42px;}
+  .controls {height:48px;}
+  .drawer {top:42px; bottom:48px;}
+  .side-note {display:none;}
+  .lesson-header {padding:6px 12px;}
+  .lesson-header h1 {font-size:18px;}
+  .dialogue .teacher-dialogue, .dialogue .learner-dialogue {font-size:14px; max-height:40%;}
+}
