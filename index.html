@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Специалист кадровой службы — учебный курс</title><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/redesign.css"></head>
+<body>
+<div id="player" class="player" data-playing="true">
+  <header class="topbar"><button id="open-menu" class="topbtn" aria-expanded="false" aria-controls="drawer">☰&nbsp; Содержание</button><div id="current-section" class="section-name">Управление персоналом</div><span class="topbar-spacer" aria-hidden="true"></span></header>
+  <main id="stage" class="stage" aria-live="polite"></main>
+  <footer class="controls" aria-label="Управление курсом">
+    <button id="fullscreen" class="icon" title="На весь экран" aria-label="На весь экран">⛶</button>
+    <button id="previous" class="icon" title="Назад" aria-label="Предыдущая сцена">◀</button>
+    <button id="play" class="icon" title="Пауза" aria-label="Пауза">❚❚</button>
+    <button id="replay" class="icon" title="Повторить сцену" aria-label="Повторить сцену">↻</button>
+    <label class="timeline-label"><span class="sr-only">Шкала сцены</span><input id="timeline" type="range" min="0" max="1000" value="0" aria-label="Шкала времени сцены"></label>
+    <span id="time" class="time">0:00 / 0:06</span>
+    <span id="storage-status" class="storage-status" hidden role="status">Прогресс не сохраняется</span>
+    <span id="completion" class="completion" title="Доля тем с верным ответом; не показатель завершения программы" aria-label="Доля тем с верным ответом">0%</span>
+    <button id="next" class="next-control">Далее <span>➜</span></button>
+  </footer>
+  <aside id="drawer" class="drawer" hidden aria-label="Содержание курса"><div class="drawer-head"><strong>Содержание курса</strong><button id="close-menu" class="icon" aria-label="Закрыть содержание">✕</button></div><div class="drawer-body" id="menu-body"></div></aside>
+</div>
+<script src="course/modules.js"></script><script src="course/interludes.js"></script><script src="course/content-1.js"></script><script src="course/content-2.js"></script><script src="course/cases.js"></script><script src="course/lectures-extended.js"></script><script src="course/lectures-advanced.js"></script><script src="course/scenario-questions.js"></script><script src="course/assignments.js"></script><script src="course/zup-workshop.js"></script><script src="course/module-assessment.js"></script><script src="course/exam-tickets.js"></script><script src="course/assessment.js"></script><script src="js/scorm.js"></script><script src="js/app.js"></script>
+</body></html>
